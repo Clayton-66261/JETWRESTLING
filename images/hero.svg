@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
-  <rect width="100%" height="100%" fill="#071025"/>
-  <g transform="translate(40,40)">
-    <rect x="0" y="0" width="1120" height="280" rx="18" fill="#0f1726" stroke="#123" stroke-opacity="0.2"/>
-    <text x="40" y="80" font-family="Georgia, serif" font-size="48" fill="#fff">JET Wrestling</text>
-    <text x="40" y="130" font-family="Georgia, serif" font-size="24" fill="#9fb3c8">Summer Camp — Fundamentals • Live Drills • Conditioning • Sportsmanship</text>
-    <g transform="translate(760,30)" >
-      <rect x="0" y="0" width="320" height="200" rx="10" fill="#071025" stroke="#173" stroke-opacity="0.2"/>
-      <text x="20" y="40" font-family="Verdana, sans-serif" font-size="18" fill="#ff6b35">Hosted at</text>
-      <text x="20" y="74" font-family="Verdana, sans-serif" font-size="18" fill="#fff">West‑Oak High School</text>
-      <text x="20" y="100" font-family="Verdana, sans-serif" font-size="14" fill="#9fb3c8">130 Warrior Lane, Westminster, SC</text>
-    </g>
-  </g>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='gray'/></svg>

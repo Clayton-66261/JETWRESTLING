@@ -1,97 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Register — JET Wrestling Camp</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <header class="site-header">
-      <div class="brand">
-        <img src="images/logo.svg" alt="JET Wrestling logo">
-        <div>
-          <h1 class="site-title">Register for JET Summer Camp</h1>
-          <div class="tag">Complete the registration below</div>
-        </div>
-      </div>
-      
-<nav class="nav" role="navigation" aria-label="Main Navigation">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="register.html">Register</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-  <a href="sources.html">Sources</a>
-</nav>
 
-    </header>
-
-    <section style="margin-top:18px">
-      <div class="card">
-        <h2>Registration Form</h2>
-        <form id="registration-form" method="POST" action="https://example.com/submit-registration">
-          <div class="form-row">
-            <label>Participant Full Name *
-              <input type="text" name="participant_name" required>
-            </label>
-            <label>Age *
-              <input type="number" name="participant_age" min="5" max="25" required>
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>Grade (fall) *
-              <input type="text" name="participant_grade" required placeholder="e.g. 6, 9">
-            </label>
-            <label>School *
-              <input type="text" name="participant_school" required>
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>Email *
-              <input type="email" name="participant_email" required>
-            </label>
-            <label>Phone *
-              <input type="tel" name="participant_phone" required>
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>Parent / Guardian Name *
-              <input type="text" name="parent_name" required>
-            </label>
-            <label>Parent / Guardian Phone *
-              <input type="tel" name="parent_phone" required>
-            </label>
-          </div>
-
-          <label>Emergency Contact (Name & Phone) *
-            <input type="text" name="emergency_contact" required>
-          </label>
-
-          <label><input type="checkbox" name="medical_ok" required> Participant is medically fit to participate.</label>
-          <label><input type="checkbox" name="photo_release"> Photo/video release consent.</label>
-
-          <label>Notes (injuries, restrictions)
-            <textarea name="notes" rows="3"></textarea>
-          </label>
-
-          <div class="cta">
-            <button class="btn" type="submit">Submit Registration</button>
-            <a class="btn alt" href="index.html">Back to Home</a>
-          </div>
-          <p class="muted small">This demo intercepts submissions — integrate a real backend or Formspree to collect registrations.</p>
-        </form>
-      </div>
-    </section>
-
-    <footer class="footer">Return to <a href="index.html">Home</a></footer>
-  </div>
-
-  <script src="scripts.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Register</title><link rel="stylesheet" href="styles.css"><script defer src="scripts.js"></script></head>
+<body><header><h1>Register</h1><nav><a href="index.html">Home</a></nav></header>
+<form id="regForm">
+<label>Name<input required name="name"></label>
+<label>Email<input required type="email" name="email"></label>
+<label>Age<input required type="number" name="age"></label>
+<button>Submit</button>
+</form>
+<div id="success" class="hidden">Thank you for registering!</div>
+</body></html>
