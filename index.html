@@ -4,48 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>JET Wrestling — Summer Camp at West-Oak High School</title>
-  <style>
-    :root{
-      --bg:#0b1220; --card:#0f1726; --accent:#ff6b35; --muted:#9fb3c8;
-      --white:#f7fbff; --radius:12px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,#071025 0%, #0b1220 60%);
-      color:var(--white); padding:28px; line-height:1.45;
-      -webkit-font-smoothing:antialiased;
-    }
-    .wrap{max-width:1000px;margin:0 auto}
-    header{display:flex;gap:18px;align-items:center;justify-content:space-between}
-    header h1{margin:0;font-size:22px}
-    header p{margin:6px 0 0 0;color:var(--muted)}
-    .hero{
-      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius); padding:18px; margin-top:18px;
-    }
-    .grid{display:grid; grid-template-columns: 1fr 320px; gap:18px}
-    .card{background:var(--card); padding:16px; border-radius:10px; margin-bottom:18px;}
-    h2{margin:0 0 8px 0}
-    p{margin:6px 0}
-    .cta{display:flex;gap:8px;flex-wrap:wrap}
-    .btn{background:var(--accent); color:#fff; border:0;padding:10px 14px;border-radius:8px;cursor:pointer;text-decoration:none}
-    .muted{color:var(--muted);font-size:14px}
-    footer{margin-top:20px;color:var(--muted);font-size:13px}
-    ul{margin:6px 0 12px 18px}
-    .meta{font-size:13px;color:var(--muted)}
-
-    /* Form styles */
-    form { display: flex; flex-direction: column; gap:12px; }
-    form label { display: flex; flex-direction: column; font-size: 14px; }
-    form input, form select, form textarea { padding: 8px; border-radius: 6px; border: 1px solid #333; background: #1a1f2c; color: var(--white); }
-    form input:focus, form select:focus, form textarea:focus { outline: 2px solid var(--accent); }
-    .form-section { background: #0f1726; padding: 16px; border-radius: 8px; }
-    .form-row { display: flex; flex-wrap: wrap; gap: 16px; }
-    .form-row > div { flex: 1; min-width: 200px; }
-    .small-text { font-size: 12px; color: var(--muted); }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="wrap">
@@ -58,9 +17,48 @@
     </header>
 
     <section class="hero">
-      <!-- Existing content here... -->
+      <div class="grid">
+        <div class="card info">
+          <h2>About the Camp</h2>
+          <p>
+            The JET Wrestling Summer Camp is a skill-building camp run by JET Wrestling Club (a youth/recreational wrestling program in Oconee County, SC).
+            The camp focuses on fundamentals, live wrestling, conditioning, and sportsmanship with separate tracks for beginners through advanced wrestlers.
+          </p>
 
-      <!-- Registration Form Section -->
+          <h2>Where & When</h2>
+          <p><strong>Location:</strong> West-Oak High School — Wrestling room / Mini Gym (130 Warrior Lane, Westminster, SC).</p>
+          <p><strong>Typical schedule:</strong> multi-day camp (mornings and afternoons), plus specialized technique sessions. Exact dates and session times are announced by JET each season.</p>
+
+          <h2>Who should attend</h2>
+          <ul>
+            <li>Kids & teens (elementary → high school) interested in learning or improving wrestling skills.</li>
+            <li>New wrestlers who need fundamentals and experienced wrestlers wanting competitive prep.</li>
+          </ul>
+
+          <h2>What to bring</h2>
+          <ul>
+            <li>Comfortable athletic wear, wrestling shoes (if available), water bottle, towel.</li>
+            <li>Parents—please bring a waiver form and emergency contact information.</li>
+          </ul>
+
+          <div class="cta">
+            <a class="btn" href="#register">Register / Info</a>
+            <a class="btn btn-secondary" href="#contact">Contact Club</a>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Quick Facts</h3>
+          <p class="muted"><strong>JET Wrestling Club</strong> — based in Seneca / Oconee County. Practices and camps are commonly held at West-Oak High facilities.</p>
+          <p class="muted"><strong>West-Oak High</strong> address: 130 Warrior Lane, Westminster, SC 29693</p>
+
+          <div style="margin-top:12px">
+            <h4>West-Oak Wrestling</h4>
+            <p class="muted">West-Oak has a strong wrestling program with multiple state titles and hosts local tournaments and youth events (including JET Open / JET Boot Camp events).</p>
+          </div>
+        </aside>
+      </div>
+
       <div class="card">
         <h2 id="register">Camp Registration Form</h2>
         <form id="registration-form" method="POST" action="https://example.com/submit-registration">
@@ -149,7 +147,7 @@
           </div>
 
           <button class="btn" type="submit">Submit Registration</button>
-          <p class="small-text">* Required fields. After submission, you will receive a confirmation email (or phone call) from JET Wrestling.</p>
+          <p class="small-text">* Required fields.</p>
         </form>
       </div>
 
@@ -160,14 +158,6 @@
     </footer>
   </div>
 
-  <script>
-    // Smooth scroll (if using anchor links)
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-      });
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
