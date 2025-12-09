@@ -1,1 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hello World — Fonts & Styles Demo</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Lobster&family=Pacifico&family=Oswald:wght@400;700&family=Cinzel:wght@400;700&family=Press+Start+2P&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>“Hello World!” — fonts & styles demo</h1>
+      <p class="lead">Click any card to toggle the style. Use the button to randomize.</p>
+      <div class="controls">
+        <button id="randomize">Randomize style</button>
+        <button id="reset">Reset to base</button>
+      </div>
+    </header>
+
+    <section class="grid" aria-live="polite">
+      <!-- Each card demonstrates a different font/style -->
+      <article class="card style-roboto" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-montserrat" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-playfair" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-lobster" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-pacifico" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-courier" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-pressstart" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-neon" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-retro" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-3d" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-glass" tabindex="0" role="button">Hello World!</article>
+      <article class="card style-typewriter" tabindex="0" role="button">Hello World!</article>
+    </section>
+
+    <footer>
+      <small>Tip: click a card or press <kbd>Enter</kbd> while focused to toggle.</small>
+    </footer>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
 
