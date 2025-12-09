@@ -3,47 +3,171 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hello World — Fonts & Styles Demo</title>
+  <title>JET Wrestling — Summer Camp at West-Oak High School</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1726; --accent:#ff6b35; --muted:#9fb3c8;
+      --white:#f7fbff; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071025 0%, #0b1220 60%);
+      color:var(--white); padding:28px; line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:1000px;margin:0 auto}
+    header{display:flex;gap:18px;align-items:center;justify-content:space-between}
+    header h1{margin:0;font-size:22px}
+    header p{margin:6px 0 0 0;color:var(--muted)}
+    .hero{
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius); padding:18px; margin-top:18px;
+    }
+    .grid{display:grid; grid-template-columns: 1fr 320px; gap:18px}
+    .card{background:var(--card); padding:16px; border-radius:10px; margin-bottom:18px;}
+    h2{margin:0 0 8px 0}
+    p{margin:6px 0}
+    .cta{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{background:var(--accent); color:#fff; border:0;padding:10px 14px;border-radius:8px;cursor:pointer;text-decoration:none}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:20px;color:var(--muted);font-size:13px}
+    ul{margin:6px 0 12px 18px}
+    .meta{font-size:13px;color:var(--muted)}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Lobster&family=Pacifico&family=Oswald:wght@400;700&family=Cinzel:wght@400;700&family=Press+Start+2P&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Local stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
+    /* Form styles */
+    form { display: flex; flex-direction: column; gap:12px; }
+    form label { display: flex; flex-direction: column; font-size: 14px; }
+    form input, form select, form textarea { padding: 8px; border-radius: 6px; border: 1px solid #333; background: #1a1f2c; color: var(--white); }
+    form input:focus, form select:focus, form textarea:focus { outline: 2px solid var(--accent); }
+    .form-section { background: #0f1726; padding: 16px; border-radius: 8px; }
+    .form-row { display: flex; flex-wrap: wrap; gap: 16px; }
+    .form-row > div { flex: 1; min-width: 200px; }
+    .small-text { font-size: 12px; color: var(--muted); }
+  </style>
 </head>
 <body>
-  <main class="container">
+  <div class="wrap">
     <header>
-      <h1>“Hello World!” — fonts & styles demo</h1>
-      <p class="lead">Click any card to toggle the style. Use the button to randomize.</p>
-      <div class="controls">
-        <button id="randomize">Randomize style</button>
-        <button id="reset">Reset to base</button>
+      <div>
+        <h1>JET Wrestling — Summer Camp @ West-Oak High School</h1>
+        <p class="muted">Skills • Drills • Character • All ages & levels welcome</p>
       </div>
+      <div class="meta">West-Oak High School — Westminster, SC</div>
     </header>
 
-    <section class="grid" aria-live="polite">
-      <!-- Each card demonstrates a different font/style -->
-      <article class="card style-roboto" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-montserrat" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-playfair" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-lobster" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-pacifico" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-courier" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-pressstart" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-neon" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-retro" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-3d" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-glass" tabindex="0" role="button">Hello World!</article>
-      <article class="card style-typewriter" tabindex="0" role="button">Hello World!</article>
+    <section class="hero">
+      <!-- Existing content here... -->
+
+      <!-- Registration Form Section -->
+      <div class="card">
+        <h2 id="register">Camp Registration Form</h2>
+        <form id="registration-form" method="POST" action="https://example.com/submit-registration">
+          <div class="form-section">
+            <h3>Participant Information</h3>
+            <div class="form-row">
+              <div>
+                <label>
+                  Full Name *
+                  <input type="text" name="participant_name" required />
+                </label>
+              </div>
+              <div>
+                <label>
+                  Age *
+                  <input type="number" name="participant_age" min="5" max="25" required />
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label>
+                  Grade (Fall 20XX) *
+                  <input type="text" name="participant_grade" placeholder="e.g. 6, 9, 11" required />
+                </label>
+              </div>
+              <div>
+                <label>
+                  School *
+                  <input type="text" name="participant_school" required />
+                </label>
+              </div>
+            </div>
+
+            <label>
+              Email *
+              <input type="email" name="participant_email" required />
+            </label>
+            <label>
+              Phone *
+              <input type="tel" name="participant_phone" placeholder="e.g. 864-555-1234" required />
+            </label>
+          </div>
+
+          <div class="form-section">
+            <h3>Parent / Guardian Information (if under 18)</h3>
+            <div class="form-row">
+              <div>
+                <label>
+                  Parent / Guardian Name *
+                  <input type="text" name="parent_name" required />
+                </label>
+              </div>
+              <div>
+                <label>
+                  Parent / Guardian Phone *
+                  <input type="tel" name="parent_phone" required />
+                </label>
+              </div>
+            </div>
+            <label>
+              Emergency Contact (Name & Phone) *
+              <input type="text" name="emergency_contact" placeholder="Name & Phone" required />
+            </label>
+          </div>
+
+          <div class="form-section">
+            <h3>Camp Options & Consent</h3>
+            <label>
+              <input type="checkbox" name="medical_ok" required />
+              I declare the participant is medically fit to participate in physical activity (first aid waiver).
+            </label>
+            <label>
+              <input type="checkbox" name="photo_release" />
+              I consent to photos/videos being taken during camp and used for promotional purposes.
+            </label>
+          </div>
+
+          <div class="form-section">
+            <h3>Additional Info / Questions</h3>
+            <label>
+              Notes (dietary restrictions, injuries, questions, etc.)
+              <textarea name="notes" rows="3"></textarea>
+            </label>
+          </div>
+
+          <button class="btn" type="submit">Submit Registration</button>
+          <p class="small-text">* Required fields. After submission, you will receive a confirmation email (or phone call) from JET Wrestling.</p>
+        </form>
+      </div>
+
     </section>
 
     <footer>
-      <small>Tip: click a card or press <kbd>Enter</kbd> while focused to toggle.</small>
+      <div class="muted">Please verify dates, times, and registration details on the club’s official pages before attending.</div>
     </footer>
-  </main>
+  </div>
 
-  <script src="scripts.js"></script>
+  <script>
+    // Smooth scroll (if using anchor links)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
 </body>
 </html>
-
