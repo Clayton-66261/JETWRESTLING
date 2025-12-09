@@ -3,158 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JET Wrestling — Summer Camp at West-Oak High School</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>JET Wrestling — Summer Camp</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div>
-        <h1>JET Wrestling — Summer Camp @ West-Oak High School</h1>
-        <p class="muted">Skills • Drills • Character • All ages & levels welcome</p>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <img src="images/logo.svg" alt="JET Wrestling logo">
+        <div>
+          <h1 class="site-title">JET Wrestling — Summer Camp</h1>
+          <div class="tag">West‑Oak High School • Westminster, SC</div>
+        </div>
       </div>
-      <div class="meta">West-Oak High School — Westminster, SC</div>
+      
+<nav class="nav" role="navigation" aria-label="Main Navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="register.html">Register</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="sources.html">Sources</a>
+</nav>
+
     </header>
 
     <section class="hero">
-      <div class="grid">
-        <div class="card info">
-          <h2>About the Camp</h2>
-          <p>
-            The JET Wrestling Summer Camp is a skill-building camp run by JET Wrestling Club (a youth/recreational wrestling program in Oconee County, SC).
-            The camp focuses on fundamentals, live wrestling, conditioning, and sportsmanship with separate tracks for beginners through advanced wrestlers.
-          </p>
-
-          <h2>Where & When</h2>
-          <p><strong>Location:</strong> West-Oak High School — Wrestling room / Mini Gym (130 Warrior Lane, Westminster, SC).</p>
-          <p><strong>Typical schedule:</strong> multi-day camp (mornings and afternoons), plus specialized technique sessions. Exact dates and session times are announced by JET each season.</p>
-
-          <h2>Who should attend</h2>
-          <ul>
-            <li>Kids & teens (elementary → high school) interested in learning or improving wrestling skills.</li>
-            <li>New wrestlers who need fundamentals and experienced wrestlers wanting competitive prep.</li>
-          </ul>
-
-          <h2>What to bring</h2>
-          <ul>
-            <li>Comfortable athletic wear, wrestling shoes (if available), water bottle, towel.</li>
-            <li>Parents—please bring a waiver form and emergency contact information.</li>
-          </ul>
-
+      <div class="inner">
+        <div class="col">
+          <h2>Train. Compete. Grow.</h2>
+          <p class="muted">A multi-day wrestling camp focused on fundamentals, live drilling, conditioning, and character development. Open to wrestlers of all levels — beginners to advanced.</p>
           <div class="cta">
-            <a class="btn" href="#register">Register / Info</a>
-            <a class="btn btn-secondary" href="#contact">Contact Club</a>
+            <a class="btn" href="register.html">Register Now</a>
+            <a class="btn alt" href="schedule.html">Camp Schedule & Pricing</a>
           </div>
         </div>
-
-        <aside class="card">
-          <h3>Quick Facts</h3>
-          <p class="muted"><strong>JET Wrestling Club</strong> — based in Seneca / Oconee County. Practices and camps are commonly held at West-Oak High facilities.</p>
-          <p class="muted"><strong>West-Oak High</strong> address: 130 Warrior Lane, Westminster, SC 29693</p>
-
-          <div style="margin-top:12px">
-            <h4>West-Oak Wrestling</h4>
-            <p class="muted">West-Oak has a strong wrestling program with multiple state titles and hosts local tournaments and youth events (including JET Open / JET Boot Camp events).</p>
-          </div>
-        </aside>
+        <div class="col">
+          <img src="images/hero.svg" alt="Jet Wrestling Camp hero">
+        </div>
       </div>
-
-      <div class="card">
-        <h2 id="register">Camp Registration Form</h2>
-        <form id="registration-form" method="POST" action="https://example.com/submit-registration">
-          <div class="form-section">
-            <h3>Participant Information</h3>
-            <div class="form-row">
-              <div>
-                <label>
-                  Full Name *
-                  <input type="text" name="participant_name" required />
-                </label>
-              </div>
-              <div>
-                <label>
-                  Age *
-                  <input type="number" name="participant_age" min="5" max="25" required />
-                </label>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label>
-                  Grade (Fall 20XX) *
-                  <input type="text" name="participant_grade" placeholder="e.g. 6, 9, 11" required />
-                </label>
-              </div>
-              <div>
-                <label>
-                  School *
-                  <input type="text" name="participant_school" required />
-                </label>
-              </div>
-            </div>
-
-            <label>
-              Email *
-              <input type="email" name="participant_email" required />
-            </label>
-            <label>
-              Phone *
-              <input type="tel" name="participant_phone" placeholder="e.g. 864-555-1234" required />
-            </label>
-          </div>
-
-          <div class="form-section">
-            <h3>Parent / Guardian Information (if under 18)</h3>
-            <div class="form-row">
-              <div>
-                <label>
-                  Parent / Guardian Name *
-                  <input type="text" name="parent_name" required />
-                </label>
-              </div>
-              <div>
-                <label>
-                  Parent / Guardian Phone *
-                  <input type="tel" name="parent_phone" required />
-                </label>
-              </div>
-            </div>
-            <label>
-              Emergency Contact (Name & Phone) *
-              <input type="text" name="emergency_contact" placeholder="Name & Phone" required />
-            </label>
-          </div>
-
-          <div class="form-section">
-            <h3>Camp Options & Consent</h3>
-            <label>
-              <input type="checkbox" name="medical_ok" required />
-              I declare the participant is medically fit to participate in physical activity (first aid waiver).
-            </label>
-            <label>
-              <input type="checkbox" name="photo_release" />
-              I consent to photos/videos being taken during camp and used for promotional purposes.
-            </label>
-          </div>
-
-          <div class="form-section">
-            <h3>Additional Info / Questions</h3>
-            <label>
-              Notes (dietary restrictions, injuries, questions, etc.)
-              <textarea name="notes" rows="3"></textarea>
-            </label>
-          </div>
-
-          <button class="btn" type="submit">Submit Registration</button>
-          <p class="small-text">* Required fields.</p>
-        </form>
-      </div>
-
     </section>
 
-    <footer>
-      <div class="muted">Please verify dates, times, and registration details on the club’s official pages before attending.</div>
+    <div class="grid">
+      <div class="card">
+        <h2>Why JET Camp?</h2>
+        <p class="muted">JET Wrestling Club is a community-focused wrestling organization based in Seneca and Oconee County, SC. Coaches emphasize technique, safety, and competitive preparedness.</p>
+        <ul>
+          <li>Technique stations and live wrestling</li>
+          <li>Strength & conditioning tailored for wrestlers</li>
+          <li>Small group instruction and situational drilling</li>
+          <li>Sportsmanship, discipline, and leadership</li>
+        </ul>
+        <p class="muted">Many of JET's events — including the JET Open and seasonal Boot Camps — are hosted at West‑Oak High School's wrestling facilities.</p>
+      </div>
+
+      <aside class="card">
+        <h3>Quick Info</h3>
+        <p class="muted"><strong>Location:</strong> West‑Oak High School, 130 Warrior Lane, Westminster, SC</p>
+        <p class="muted"><strong>Typical Ages:</strong> 6–18 (beginner through high school)</p>
+        <p class="muted"><strong>Contact:</strong> See contact page for club & venue details.</p>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div>Questions? Visit the <a href="contact.html">contact page</a> or view <a href="sources.html">sources</a> for official listings and event pages.</div>
     </footer>
   </div>
 
